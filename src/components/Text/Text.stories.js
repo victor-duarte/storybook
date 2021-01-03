@@ -5,6 +5,23 @@ export default {
     color: { control: "color" },
   },
   component: Text,
+  decorators: [
+    (Story) => (
+      <div style={{ margin: "3em" }}>
+        <Story />
+      </div>
+    ),
+  ],
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: "blue", value: "#00f" },
+        { name: "green", value: "#0f0" },
+        { name: "red", value: "#f00" },
+        { name: "yellow", value: "#ff0" },
+      ],
+    },
+  },
   title: "Custom/Text",
 };
 
